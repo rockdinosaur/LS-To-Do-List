@@ -1,0 +1,396 @@
+@import url("reset.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main,
+header,
+nav {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font: normal 16px Helvetica, Arial, sans-serif;
+}
+
+body::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Header Styles */
+
+header {
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+
+header nav {
+  width: 335px;
+  background-color: #464f77;
+  padding-top: 70px;
+}
+
+header h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+header article:first-child h2 {
+  margin-left: 75px;
+}
+
+header ul li {
+  color: #b2b5c3;
+  padding: 15px 0;
+}
+
+header article:first-child {
+  padding-bottom: 50px;
+}
+
+header article:nth-child(2) ul li {
+  text-decoration: line-through;
+}
+
+/* Menu and Checked Icons */
+
+header article:nth-child(1) h2::before {
+  display: inline-block;
+  margin-right: 10px;
+  width: 26px;
+  height: 26px;
+  content: "";
+  background: transparent url("images/icon_list.png") 0 0 no-repeat;
+  vertical-align: middle;
+}
+
+header article:nth-child(2) h2::before {
+  display: inline-block;
+  margin-right: 10px;
+  width: 26px;
+  height: 26px;
+  content: "";
+  background: transparent url("images/icon_checked.png") 0 0 no-repeat;
+  vertical-align: middle;
+}
+
+header article:first-child ul {
+  margin-right: -118px;
+}
+
+.active {
+  background-color: #383f5f;
+}
+
+/* Right bubbles */
+
+header article:first-child h2::after {
+  display: inline-block;
+  width: 25px;
+  height: 18px;
+  font-size: 14px;
+  content: "18";
+  border-radius: 10px;
+  background-color: #148fd5;
+  color: #fff;
+  margin-left: 75px;
+}
+
+header article:first-child ul li:first-child::after {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+  content: "8";
+  border-radius: 100%;
+  background-color: #148fd5;
+  color: #fff;
+  margin-left: 100px;
+}
+
+header article:first-child ul li:nth-child(2)::after {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+  content: "2";
+  border-radius: 100%;
+  background-color: #6b7292;
+  margin-left: 100px;
+}
+
+header article:first-child ul li:nth-child(3)::after,
+header article:first-child ul li:nth-child(4)::after {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+  content: "1";
+  border-radius: 100%;
+  background-color: #6b7292;
+  margin-left: 100px;
+}
+
+header article:first-child ul li:nth-child(5)::after {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+  content: "6";
+  border-radius: 100%;
+  background-color: #6b7292;
+  margin-left: 100px;
+}
+
+/* Main Styles */
+
+main {
+  overflow: hidden;
+  padding: 0 90px 0 20px;
+}
+
+main h2 {
+  font-size: 21px;
+  color: #050505;
+  letter-spacing: 2px;
+  padding: 70px 0 40px 0;
+  text-indent: 15px;
+}
+
+main h2::after {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+  content: "8";
+  border-radius: 100%;
+  background-color: #148fd5;
+  color: #fff;
+  margin-left: 20px;
+  vertical-align: 3px;
+  text-indent: 5px;
+}
+
+main h3 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+  text-indent: 15px;
+}
+
+main h3 a {
+  color: #148fd5;
+}
+
+main h3::before {
+  display: inline-block;
+  margin-right: 15px;
+  width: 13px;
+  height: 13px;
+  content: "";
+  background: transparent url("images/icon_add.png") 0 0 no-repeat;
+  vertical-align: -1px;
+  cursor: pointer;
+}
+
+main ol li {
+  font-size: 16px;
+  color: #060606;
+  padding: 20px;
+  border-top: 1px solid #e7e7e7;
+  letter-spacing: 1px;
+}
+
+main ol li label:hover {
+  color: #148fd5;
+}
+
+main ol input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+main ol a {
+  font-size: 0;
+}
+
+main ol a::after {
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  content: "";
+  background: transparent url("images/icon_trash.png") 0 0 no-repeat;
+  vertical-align: -3px;
+  float: right;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+main .checkedbox label {
+  color: #b3b3b3;
+  text-decoration: line-through;
+}
+
+main .checkedbox span {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: transparent url("images/icon_list_checked.png") 0 0 no-repeat;
+  margin-right: 10px;
+}
+
+main .checkbox span {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: transparent url("images/icon_list_unchecked.png") 0 0 no-repeat;
+  margin-right: 10px;
+}
+
+/* Form Styles */
+
+
+div {
+  box-sizing: content-box;
+  display: none;
+  width: 575px;
+  height: 400px;
+}
+
+fieldset {
+  box-sizing: content-box;
+  position: relative;
+  background-color: #fff;
+  border: 35px solid #fff;
+}
+
+.modal {
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 440px;
+  z-index: 1;
+}
+
+.modal::after {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+
+.modal input,
+.modal textarea {
+  font-size: 16px;
+}
+
+div .partial,
+div dt,
+div dd,
+div textarea {
+  display: inline-block;
+}
+
+div dl:nth-of-type(3) dt,
+div dl:nth-of-type(4) dt {
+  display: none;
+}
+
+div input,
+textarea {
+  padding: 10px;
+  border: 1px solid #b3b3b3;
+}
+
+div dl {
+  margin-bottom: 20px;
+}
+div dt {
+  vertical-align: top;
+  width: 100px;
+}
+
+div label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+div input[type="text"],
+div dd {
+  width: 399px;
+}
+
+div input[type="number"],
+.partial dd {
+  width: 124px;
+}
+
+div textarea {
+  width: 399px;
+  resize: none;
+  height: 140px;
+}
+
+div a {
+  display: inline-block;
+  color: #fff;
+  background-color: #148fd5;
+  width: 185px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 3px;
+  margin-right: 18px;
+}
+
+div a:nth-of-type(2) {
+  margin-right: 0;
+}
+
+/* Responsive Breakpoint for Tablet */
+
+@media (max-width: 768px) {
+
+header > label::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 370px;
+    background: transparent url("images/icon_hamburger.png") 0 0 no-repeat;
+  }
+
+  #menu-toggle {
+    display: none; /* hide the checkbox */
+  }
+
+  nav {
+    display: none;
+  }
+
+  #menu-toggle:checked + nav {
+    display: block;
+  }
+
+}

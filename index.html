@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title">
+  </head>
+  <body>
+
+    <header>
+      <label for="menu-toggle"></label>
+      <input type="checkbox" id="menu-toggle"/>
+      <nav>
+        <article>
+          <h2>All Todos</h2>
+          <ul>
+            <li class="active">02/16</li>
+            <li>03/16</li>
+            <li>04/16</li>
+            <li>05/16</li>
+            <li>06/16</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Completed</h2>
+          <ul>
+            <li>02/16</li>
+            <li>03/16</li>
+            <li>04/16</li>
+            <li>05/16</li>
+            <li>06/16</li>
+          </ul>
+        </article>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>02/16</h2>
+        <h3><a href="#">Add new to do</a></h3>
+
+        <ol>
+          <li class="checkbox">
+            <label>
+              <input type="checkbox"/>
+              <span></span>
+              Item 1
+            </label>
+            <a href="#">Delete</a>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input type="checkbox"/>
+              <span></span>
+              Item 2
+            </label>
+            <a href="#">Delete</a>
+          </li>
+          <li class="checkedbox">
+            <label>
+              <input type="checkbox"/>
+              <span></span>
+              Item 3
+            </label>
+            <a href="#">Delete</a>
+          </li>
+          <li class="checkedbox">
+            <label>
+              <input type="checkbox"/>
+              <span></span>
+              Item 4
+            </label>
+            <a href="#">Delete</a>
+          </li>
+          <li class="checkedbox">
+            <label>
+              <input type="checkbox"/>
+              <span></span>
+              Item 5
+            </label>
+            <a href="#">Delete</a>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input type="checkbox"/>
+              <span></span>
+              Item 6
+            </label>
+            <a href="#">Delete</a>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input type="checkbox"/>
+              <span></span>
+              Item 7
+            </label>
+            <a href="#">Delete</a>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input type="checkbox"/>
+              <span></span>
+              Item 8
+            </label>
+            <a href="#">Delete</a>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input type="checkbox"/>
+              <span></span>
+              Item 9
+            </label>
+            <a href="#">Delete</a>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+
+    <div class="modal"> <!-- Add class="modal" to this div -->
+      <form action="index.html" method="post">
+        <fieldset>
+          <dl>
+            <dt><label for="title">Title</label></dt>
+            <dd><input type="text" name="title" id="title" placeholder="Item Name"></dd>
+          </dl>
+
+          <dl class="partial">
+            <dt><label for="day">Due Date</label></dt>
+            <dd><input type="number" name="day" id="day" min="1" max="31" step="1" placeholder="Day"></dd>
+          </dl>
+          <span>/</span>
+          <dl class="partial">
+            <dt></dt>
+            <dd><input type="number" name="month" id="month" min="1" max="12" step="1" placeholder="Month"></dd>
+          </dl>
+          <span>/</span>
+          <dl class="partial">
+            <dt></dt>
+            <dd><input type="number" name="year" id="year" min="1900" max="2016" placeholder="Year"></dd>
+          </dl>
+
+          <dl>
+            <dt><label for="description">Description</label></dt>
+            <dd><textarea name="description" rows="8" cols="40" id="description" placeholder="Description"></textarea></dd>
+          </dl>
+          <dl>
+            <dt></dt>
+            <dd><a href="#">Save</a><a href="#">Mark As Complete</a></dd>
+          </dl>
+        </fieldset>
+      </form>
+    </div>
+
+
+  </body>
+</html>
